@@ -4,6 +4,63 @@
 
 part of firebase_ml_vision;
 
+/// Options for cloud vision detectors.
+class CloudTextRecognizerOptions {
+  /// Constructor for [CloudTextRecognizerOptions].
+  ///
+  /// [] must be greater than 0, otherwise AssertionError is thrown.
+  /// Default is 10.
+  ///
+  /// [modelType] has default [CloudModelType.stable].
+  const CloudTextRecognizerOptions(
+      {this.apiKeyOverride = null, this.hintedLanguages = null, this.modelType = 'sparse'})
+      : assert(modelType == 'sparse' || modelType == 'dense');
+
+  final String apiKeyOverride;
+  final List<String> hintedLanguages;
+  final String modelType;
+
+  Map<String, dynamic> _toMap() => <String, dynamic>{
+    'recognizerType': 'cloud',
+    'apiKeyOverride': apiKeyOverride,
+    'hintedLanguages': hintedLanguages,
+    'modelType': modelType,
+  };
+}
+
+class CloudTextRecognizer extends FirebaseVisionDetector {
+  CloudTextRecognizer._(this.options) : assert(options != null);
+
+  /// Options used to configure this cloud detector.
+  final CloudTextRecognizerOptions options;
+
+  /// Detects [VisionText] from a [FirebaseVisionImage].
+  ///
+  /// The OCR is performed asynchronously.
+  @override
+  Future<VisionText> processImage(FirebaseVisionImage visionImage) async {
+    final Map<dynamic, dynamic> reply =
+    await FirebaseVision.channel.invokeMethod(
+      'TextRecognizer#processImage',
+      <String, dynamic>{
+        'path': visionImage.imageFile.path,
+        'options': options._toMap(),
+      },
+    );
+
+    return VisionText._(reply);
+  }
+
+  /// Detects [VisionText] from a [FirebaseVisionImage].
+  ///
+  /// The OCR is performed asynchronously.
+  @Deprecated('Please use `processImage`')
+  @override
+  Future<VisionText> detectInImage(FirebaseVisionImage visionImage) async {
+    return processImage(visionImage);
+  }
+}
+
 /// Detector for performing optical character recognition(OCR) on an input image.
 ///
 /// A text recognizer is created via `textRecognizer()` in [FirebaseVision]:
@@ -23,7 +80,9 @@ class TextRecognizer implements FirebaseVisionDetector {
       'TextRecognizer#processImage',
       <String, dynamic>{
         'path': visionImage.imageFile.path,
-        'options': <String, dynamic>{},
+        'options': <String, dynamic>{
+          'recognizerType': 'onDevice',
+        },
       },
     );
 
