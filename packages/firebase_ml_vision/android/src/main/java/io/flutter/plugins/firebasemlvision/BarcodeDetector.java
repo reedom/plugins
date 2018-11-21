@@ -242,7 +242,6 @@ class BarcodeDetector implements Detector {
   }
 
   private FirebaseVisionBarcodeDetectorOptions parseOptions(Map<String, Object> optionsData) {
-    @SuppressWarnings("unchecked")
     Integer barcodeFormats = (Integer) optionsData.get("barcodeFormats");
     return new FirebaseVisionBarcodeDetectorOptions.Builder()
         .setBarcodeFormats(barcodeFormats)
