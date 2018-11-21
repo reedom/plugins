@@ -121,8 +121,12 @@ static FIRVisionTextRecognizer *recognizer;
                                                     result:(FlutterResult)result {
   FIRVisionCloudTextRecognizerOptions *options = [[FIRVisionCloudTextRecognizerOptions alloc] init];
 
-  options.APIKeyOverride = optionsData[@"apiKeyOverride"];
-  options.languageHints = optionsData[@"hintedLanguages"];
+  if ([optionsData[@"apiKeyOverride"] isKindOfClass:[NSString class]]) {
+    options.APIKeyOverride = optionsData[@"apiKeyOverride"];
+  }
+  if ([optionsData[@"hintedLanguages"] isKindOfClass:[NSArray class]]) {
+    options.languageHints = optionsData[@"hintedLanguages"];
+  }
 
   NSString *modelType = optionsData[@"modelType"];
   if ([modelType isEqualToString:@"sparse"]) {
