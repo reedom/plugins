@@ -55,6 +55,15 @@
 
 - (FIRVisionImage *)filePathToVisionImage:(NSString *)path {
   UIImage *image = [UIImage imageWithContentsOfFile:path];
+
+  if (image.imageOrientation != UIImageOrientationUp) {
+    CGSize size = image.size;
+    UIGraphicsBeginImageContext(size);
+    [image drawInRect:CGRectMake(0, 0, size.width, size.height)];
+    image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+  }
+
   return [[FIRVisionImage alloc] initWithImage:image];
 }
 @end
