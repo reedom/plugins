@@ -8,6 +8,7 @@ import 'dart:typed_data';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
+import 'package:texture_hub/texture_hub.dart';
 
 part 'camera_image.dart';
 
@@ -568,6 +569,12 @@ class CameraController extends ValueNotifier<CameraValue> {
     }
   }
 
+  Future<void> addTextureOutput(TextureSlot slot) async {
+    await _channel.invokeMethod<void>(
+      'addTextureOutput',
+      <String, dynamic>{'handle': slot.handle},
+    );
+  }
   /// Releases the resources of this camera.
   @override
   Future<void> dispose() async {

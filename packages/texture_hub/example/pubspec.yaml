@@ -1,0 +1,24 @@
+name: texture_hub_example
+description: Demonstrates how to use the texture_hub plugin.
+publish_to: 'none'
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  test: ^1.5.2
+  flutter_test:
+    sdk: flutter
+
+  texture_hub:
+    path: ../
+  camera:
+    path: ../../camera
+
+flutter:
+
+  uses-material-design: true

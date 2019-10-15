@@ -16,7 +16,8 @@ homepage: https://github.com/flutter/plugins/tree/master/packages/camera
 dependencies:
   flutter:
     sdk: flutter
-
+  texture_hub:
+    path: ../texture_hub
 dev_dependencies:
   path_provider: ^0.5.0
   video_player: ^0.10.0

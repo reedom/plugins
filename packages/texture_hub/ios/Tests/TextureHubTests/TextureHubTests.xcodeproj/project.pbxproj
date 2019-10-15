@@ -1,0 +1,510 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07BFC0622353466900BD76CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BFC0612353466900BD76CF /* AppDelegate.swift */; };
+		07BFC0642353466900BD76CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BFC0632353466900BD76CF /* SceneDelegate.swift */; };
+		07BFC0662353466900BD76CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BFC0652353466900BD76CF /* ContentView.swift */; };
+		07BFC0682353466B00BD76CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07BFC0672353466B00BD76CF /* Assets.xcassets */; };
+		07BFC06B2353466B00BD76CF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07BFC06A2353466B00BD76CF /* Preview Assets.xcassets */; };
+		07BFC06E2353466B00BD76CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07BFC06C2353466B00BD76CF /* LaunchScreen.storyboard */; };
+		07BFC0792353466B00BD76CF /* TextureValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BFC0782353466B00BD76CF /* TextureValueTests.swift */; };
+		07BFC08C2353475A00BD76CF /* _TextureValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BFC0882353475A00BD76CF /* _TextureValue.m */; };
+		07BFC08D2353475A00BD76CF /* _TextureListeners.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BFC08A2353475A00BD76CF /* _TextureListeners.m */; };
+		07BFC08F2353718000BD76CF /* TextureListenersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BFC08E2353718000BD76CF /* TextureListenersTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		07BFC0752353466B00BD76CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07BFC0562353466900BD76CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07BFC05D2353466900BD76CF;
+			remoteInfo = TextureHubTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07BFC05E2353466900BD76CF /* TextureHubTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextureHubTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07BFC0612353466900BD76CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		07BFC0632353466900BD76CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		07BFC0652353466900BD76CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		07BFC0672353466B00BD76CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		07BFC06A2353466B00BD76CF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		07BFC06D2353466B00BD76CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		07BFC06F2353466B00BD76CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07BFC0742353466B00BD76CF /* TextureHubTestsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextureHubTestsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		07BFC0782353466B00BD76CF /* TextureValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureValueTests.swift; sourceTree = "<group>"; };
+		07BFC07A2353466B00BD76CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07BFC0852353472A00BD76CF /* TextureHubTestsTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TextureHubTestsTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		07BFC0882353475A00BD76CF /* _TextureValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _TextureValue.m; path = ../../../Classes/_TextureValue.m; sourceTree = "<group>"; };
+		07BFC0892353475A00BD76CF /* _TextureListeners.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _TextureListeners.h; path = ../../../Classes/_TextureListeners.h; sourceTree = "<group>"; };
+		07BFC08A2353475A00BD76CF /* _TextureListeners.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _TextureListeners.m; path = ../../../Classes/_TextureListeners.m; sourceTree = "<group>"; };
+		07BFC08B2353475A00BD76CF /* _TextureValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _TextureValue.h; path = ../../../Classes/_TextureValue.h; sourceTree = "<group>"; };
+		07BFC08E2353718000BD76CF /* TextureListenersTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextureListenersTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		07BFC05B2353466900BD76CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07BFC0712353466B00BD76CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07BFC0552353466900BD76CF = {
+			isa = PBXGroup;
+			children = (
+				07BFC0602353466900BD76CF /* TextureHubTests */,
+				07BFC0772353466B00BD76CF /* TextureHubTestsTests */,
+				07BFC05F2353466900BD76CF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		07BFC05F2353466900BD76CF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07BFC05E2353466900BD76CF /* TextureHubTests.app */,
+				07BFC0742353466B00BD76CF /* TextureHubTestsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		07BFC0602353466900BD76CF /* TextureHubTests */ = {
+			isa = PBXGroup;
+			children = (
+				07BFC084235346DF00BD76CF /* source */,
+				07BFC0612353466900BD76CF /* AppDelegate.swift */,
+				07BFC0632353466900BD76CF /* SceneDelegate.swift */,
+				07BFC0652353466900BD76CF /* ContentView.swift */,
+				07BFC0672353466B00BD76CF /* Assets.xcassets */,
+				07BFC06C2353466B00BD76CF /* LaunchScreen.storyboard */,
+				07BFC06F2353466B00BD76CF /* Info.plist */,
+				07BFC0692353466B00BD76CF /* Preview Content */,
+			);
+			path = TextureHubTests;
+			sourceTree = "<group>";
+		};
+		07BFC0692353466B00BD76CF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				07BFC06A2353466B00BD76CF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		07BFC0772353466B00BD76CF /* TextureHubTestsTests */ = {
+			isa = PBXGroup;
+			children = (
+				07BFC0892353475A00BD76CF /* _TextureListeners.h */,
+				07BFC08A2353475A00BD76CF /* _TextureListeners.m */,
+				07BFC08B2353475A00BD76CF /* _TextureValue.h */,
+				07BFC0882353475A00BD76CF /* _TextureValue.m */,
+				07BFC0782353466B00BD76CF /* TextureValueTests.swift */,
+				07BFC08E2353718000BD76CF /* TextureListenersTests.swift */,
+				07BFC07A2353466B00BD76CF /* Info.plist */,
+				07BFC0852353472A00BD76CF /* TextureHubTestsTests-Bridging-Header.h */,
+			);
+			path = TextureHubTestsTests;
+			sourceTree = "<group>";
+		};
+		07BFC084235346DF00BD76CF /* source */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		07BFC05D2353466900BD76CF /* TextureHubTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07BFC07D2353466B00BD76CF /* Build configuration list for PBXNativeTarget "TextureHubTests" */;
+			buildPhases = (
+				07BFC05A2353466900BD76CF /* Sources */,
+				07BFC05B2353466900BD76CF /* Frameworks */,
+				07BFC05C2353466900BD76CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TextureHubTests;
+			productName = TextureHubTests;
+			productReference = 07BFC05E2353466900BD76CF /* TextureHubTests.app */;
+			productType = "com.apple.product-type.application";
+		};
+		07BFC0732353466B00BD76CF /* TextureHubTestsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07BFC0802353466B00BD76CF /* Build configuration list for PBXNativeTarget "TextureHubTestsTests" */;
+			buildPhases = (
+				07BFC0702353466B00BD76CF /* Sources */,
+				07BFC0712353466B00BD76CF /* Frameworks */,
+				07BFC0722353466B00BD76CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07BFC0762353466B00BD76CF /* PBXTargetDependency */,
+			);
+			name = TextureHubTestsTests;
+			productName = TextureHubTestsTests;
+			productReference = 07BFC0742353466B00BD76CF /* TextureHubTestsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		07BFC0562353466900BD76CF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = FlutterPlugins;
+				TargetAttributes = {
+					07BFC05D2353466900BD76CF = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					07BFC0732353466B00BD76CF = {
+						CreatedOnToolsVersion = 11.1;
+						LastSwiftMigration = 1110;
+						TestTargetID = 07BFC05D2353466900BD76CF;
+					};
+				};
+			};
+			buildConfigurationList = 07BFC0592353466900BD76CF /* Build configuration list for PBXProject "TextureHubTests" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 07BFC0552353466900BD76CF;
+			productRefGroup = 07BFC05F2353466900BD76CF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				07BFC05D2353466900BD76CF /* TextureHubTests */,
+				07BFC0732353466B00BD76CF /* TextureHubTestsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		07BFC05C2353466900BD76CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07BFC06E2353466B00BD76CF /* LaunchScreen.storyboard in Resources */,
+				07BFC06B2353466B00BD76CF /* Preview Assets.xcassets in Resources */,
+				07BFC0682353466B00BD76CF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07BFC0722353466B00BD76CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		07BFC05A2353466900BD76CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07BFC0622353466900BD76CF /* AppDelegate.swift in Sources */,
+				07BFC0642353466900BD76CF /* SceneDelegate.swift in Sources */,
+				07BFC0662353466900BD76CF /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07BFC0702353466B00BD76CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07BFC0792353466B00BD76CF /* TextureValueTests.swift in Sources */,
+				07BFC08C2353475A00BD76CF /* _TextureValue.m in Sources */,
+				07BFC08D2353475A00BD76CF /* _TextureListeners.m in Sources */,
+				07BFC08F2353718000BD76CF /* TextureListenersTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		07BFC0762353466B00BD76CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07BFC05D2353466900BD76CF /* TextureHubTests */;
+			targetProxy = 07BFC0752353466B00BD76CF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		07BFC06C2353466B00BD76CF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07BFC06D2353466B00BD76CF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		07BFC07B2353466B00BD76CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		07BFC07C2353466B00BD76CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		07BFC07E2353466B00BD76CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"TextureHubTests/Preview Content\"";
+				DEVELOPMENT_TEAM = R6HMM3C9D7;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = TextureHubTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.reedom.TextureHubTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		07BFC07F2353466B00BD76CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"TextureHubTests/Preview Content\"";
+				DEVELOPMENT_TEAM = R6HMM3C9D7;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = TextureHubTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.reedom.TextureHubTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		07BFC0812353466B00BD76CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R6HMM3C9D7;
+				INFOPLIST_FILE = TextureHubTestsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.reedom.TextureHubTestsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TextureHubTestsTests/TextureHubTestsTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TextureHubTests.app/TextureHubTests";
+			};
+			name = Debug;
+		};
+		07BFC0822353466B00BD76CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R6HMM3C9D7;
+				INFOPLIST_FILE = TextureHubTestsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.reedom.TextureHubTestsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TextureHubTestsTests/TextureHubTestsTests-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TextureHubTests.app/TextureHubTests";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		07BFC0592353466900BD76CF /* Build configuration list for PBXProject "TextureHubTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07BFC07B2353466B00BD76CF /* Debug */,
+				07BFC07C2353466B00BD76CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07BFC07D2353466B00BD76CF /* Build configuration list for PBXNativeTarget "TextureHubTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07BFC07E2353466B00BD76CF /* Debug */,
+				07BFC07F2353466B00BD76CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07BFC0802353466B00BD76CF /* Build configuration list for PBXNativeTarget "TextureHubTestsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07BFC0812353466B00BD76CF /* Debug */,
+				07BFC0822353466B00BD76CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 07BFC0562353466900BD76CF /* Project object */;
+}

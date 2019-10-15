@@ -2,11 +2,11 @@
 # To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
 #
 Pod::Spec.new do |s|
-  s.name             = 'camera'
+  s.name             = 'texture_hub'
   s.version          = '0.0.1'
-  s.summary          = 'A new flutter plugin project.'
+  s.summary          = 'Flutter plugin for relaying texture data.'
   s.description      = <<-DESC
-A new flutter plugin project.
+Flutter plugin for relaying texture data.
                        DESC
   s.homepage         = 'http://example.com'
   s.license          = { :file => '../LICENSE' }
@@ -15,11 +15,7 @@ A new flutter plugin project.
   s.source_files = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'
   s.dependency 'Flutter'
-  s.dependency 'texture_hub'
-  s.platform = :ios, '8.0'
-  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'VALID_ARCHS' => 'armv7 arm64 x86_64' }
 
-  s.test_spec 'Tests' do |test_spec|
-    test_spec.source_files = 'Tests/**/*'
-  end
+  s.ios.deployment_target = '8.0'
 end
+

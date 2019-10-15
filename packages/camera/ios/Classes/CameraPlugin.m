@@ -7,6 +7,7 @@
 #import <Accelerate/Accelerate.h>
 #import <CoreMotion/CoreMotion.h>
 #import <libkern/OSAtomic.h>
+#import <texture_hub/texture_hub-Swift.h>
 
 static FlutterError *getFlutterError(NSError *error) {
   return [FlutterError errorWithCode:[NSString stringWithFormat:@"Error %d", (int)error.code]
@@ -192,6 +193,8 @@ static ResolutionPreset getResolutionPresetForString(NSString *preset) {
 @property(assign, nonatomic) CMTime audioTimeOffset;
 @property(nonatomic) CMMotionManager *motionManager;
 @property AVAssetWriterInputPixelBufferAdaptor *videoAdaptor;
+@property(strong, nonatomic) TextureHubAdapter* textureHub;
+@property(assign, nonatomic) int64_t textureHubHandle;
 - (instancetype)initWithCameraName:(NSString *)cameraName
                   resolutionPreset:(NSString *)resolutionPreset
                        enableAudio:(BOOL)enableAudio
@@ -348,6 +351,19 @@ FourCharCode const videoFormat = kCVPixelFormatType_32BGRA;
   if (output == _captureVideoOutput) {
     CVPixelBufferRef newBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
     CFRetain(newBuffer);
+
+    if (self->_textureHub) {
+      [self->_textureHub handlePixelBufferWithHandle:self->_textureHubHandle
+                                         pixelBuffer:newBuffer];
+//      SEL sel = NSSelectorFromString(@"handlePixelBufferWithHandle:pixelBuffer:");
+//      NSInvocation *inv = [NSInvocation invocationWithMethodSignature:[self->_textureHub methodSignatureForSelector:sel]];
+//      [inv setSelector:sel];
+//      [inv setTarget:self->_textureHub];
+//      [inv setArgument:&(self->_textureHubHandle) atIndex:2];
+//      [inv setArgument:&(newBuffer) atIndex:3];
+//      [inv invoke];
+    }
+
     CVPixelBufferRef old = _latestPixelBuffer;
     while (!OSAtomicCompareAndSwapPtrBarrier(old, newBuffer, (void **)&_latestPixelBuffer)) {
       old = _latestPixelBuffer;
@@ -759,6 +775,12 @@ FourCharCode const videoFormat = kCVPixelFormatType_32BGRA;
     }
   }
 }
+
+- (void)addTextureOutput:(NSObject*)textureHub handle:(int64_t)handle {
+  self->_textureHub = textureHub;
+  self->_textureHubHandle = handle;
+}
+
 @end
 
 @interface CameraPlugin ()
@@ -877,6 +899,24 @@ FourCharCode const videoFormat = kCVPixelFormatType_32BGRA;
   } else if ([@"resumeVideoRecording" isEqualToString:call.method]) {
     [_camera resumeVideoRecording];
     result(nil);
+  } else if ([@"addTextureOutput" isEqualToString:call.method]) {
+    dispatch_sync(dispatch_get_main_queue(), ^{
+      FlutterAppDelegate* appDelegate = (FlutterAppDelegate*)UIApplication.sharedApplication.delegate;
+      if (![appDelegate conformsToProtocol:@protocol(FlutterPluginRegistry)]) {
+        result(nil);
+        return;
+      }
+      TextureHubAdapter* textureHub = (TextureHubAdapter*)[appDelegate valuePublishedByPlugin:@"TextureHubPlugin"];
+      if (![textureHub respondsToSelector:@selector(handlePixelBufferWithHandle: pixelBuffer:)]) {
+        result(nil);
+        return;
+      }
+
+      NSDictionary *argsMap = call.arguments;
+      int64_t handle = ((NSNumber *)argsMap[@"handle"]).longValue;
+      [_camera addTextureOutput:textureHub handle:handle];
+      result(nil);
+    });
   } else {
     NSDictionary *argsMap = call.arguments;
     NSUInteger textureId = ((NSNumber *)argsMap[@"textureId"]).unsignedIntegerValue;

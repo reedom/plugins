@@ -1,0 +1,27 @@
+name: texture_hub
+description: Flutter plugin for relaying texture data.
+version: 0.0.1
+authors:
+  - HANAI, Tohru <tohru@reedom.com>
+
+homepage: https://github.com/flutter/plugins/tree/master/packages/texture_hub
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+  flutter: ">=1.2.0 <2.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  texture_hub_example:
+    path: example/
+  test: ^1.5.2
+
+flutter:
+  plugin:
+    androidPackage: io.flutter.plugins.texture_hub
+    pluginClass: TextureHubPlugin
